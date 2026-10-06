@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata | Link in Bio</title>
+    
+    <!-- Memuat Tailwind CSS untuk styling yang cepat dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Memuat Google Fonts (Poppins) agar tulisan lebih modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Latar belakang cadangan jika animasi gagal dimuat */
+            background-color: #2b2b2b;
+        }
+
+        /* Animasi Latar Belakang Gradien yang Bergerak */
+        @keyframes gradient-bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animated-bg {
+            /* Warna gradien yang bisa kamu ubah sesuai selera (gunakan kode HEX) */
+            background: linear-gradient(-45deg, #1e3a8a, #9333ea, #db2777, #ea580c);
+            background-size: 400% 400%;
+            animation: gradient-bg 15s ease infinite;
+        }
+
+        /* Efek Glassmorphism (Kaca Transparan) untuk Kartu Utama */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* Efek Glassmorphism untuk Tombol */
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* Efek saat tombol di-hover (disentuh/diarahkan mouse) */
+        .glass-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-4px); /* Mengangkat tombol sedikit */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Animasi untuk foto profil */
+        .profile-img-container img {
+            transition: transform 0.3s ease;
+        }
+        .profile-img-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="animated-bg min-h-screen text-white flex items-center justify-center p-4 sm:p-8">
+
+    <!-- Container Utama (Kartu Kaca) -->
+    <div class="glass-card w-full max-w-md p-8 rounded-[2rem] flex flex-col items-center text-center relative overflow-hidden">
+        
+        <!-- Ornamen cahaya tambahan (opsional) -->
+        <div class="absolute top-0 left-0 w-full h-32 bg-white opacity-5 blur-[60px] rounded-full"></div>
+
+        <!-- ========================================== -->
+        <!-- BAGIAN 1: FOTO PROFIL, NAMA, DAN DESKRIPSI -->
+        <!-- ========================================== -->
+        
+        <!-- Ganti link gambar di bawah (src) dengan link foto kamu -->
+        <div class="profile-img-container mb-5 relative group cursor-pointer mt-4">
+            <div class="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+            <!-- UBAH FOTO DI SINI: Ganti URL src="..." dengan URL foto kamu -->
+            <img src="profile.png" alt="Foto Profil" 
+                 class="relative w-28 h-28 sm:w-32 sm:h-32 object-cover rounded-full border-2 border-white/50 shadow-lg group-hover:border-white transition-colors duration-300">
+        </div>
+
+        <!-- UBAH NAMA DI SINI -->
+        <h1 class="text-2xl sm:text-3xl font-bold tracking-wide mb-1 drop-shadow-md">
+            Dava Maulana Afandi Ahmad
+        </h1>
+        
+        <!-- UBAH DESKRIPSI/BIO DI SINI -->
+        <p class="text-sm sm:text-base text-gray-200 mb-8 max-w-[280px] font-light">
+            Content Creator | Web Developer | Tech Enthusiast. Selamat datang di profil saya!
+        </p>
+
+        <!-- ========================================== -->
+        <!-- BAGIAN TAMBAHAN: INFO BIODATA DETAIL       -->
+        <!-- ========================================== -->
+        <!-- Kamu bisa mengubah isi teks di bagian kanan (font-medium text-right) sesuai data diri kamu -->
+        <div class="w-full bg-white/5 border border-white/10 rounded-xl p-4 mb-8 text-sm text-left flex flex-col gap-3 shadow-inner backdrop-blur-sm">
+            
+            <!-- Info 1: Lokasi -->
+            <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                <span class="text-white/70"><i class="fa-solid fa-location-dot w-5 text-center mr-1"></i> Lokasi</span>
+                <span class="font-medium text-right">sumatra jawa, Indonesia</span>
+            </div>
+            
+            <!-- Info 2: Tanggal Lahir -->
+            <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                <span class="text-white/70"><i class="fa-solid fa-cake-candles w-5 text-center mr-1"></i> Tgl Lahir</span>
+                <span class="font-medium text-right">27 september 2010</span>
+            </div>
+            
+            <!-- Info 3: Profesi / Pekerjaan -->
+            <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                <span class="text-white/70"><i class="fa-solid fa-briefcase w-5 text-center mr-1"></i> Profesi</span>
+                <span class="font-medium text-right">Siswa smk muhammadiyah sekampung</span>
+            </div>
+            
+            <!-- Info 4: Hobi -->
+            <div class="flex justify-between items-center pb-1">
+                <span class="text-white/70"><i class="fa-solid fa-heart w-5 text-center mr-1"></i> Hobi</span>
+                <span class="font-medium text-right">Coding & Hiking</span>
+            </div>
+            
+        </div>
+
+        <!-- ========================================== -->
+        <!-- BAGIAN 2: TOMBOL-TOMBOL SOSIAL MEDIA       -->
+        <!-- ========================================== -->
+        
+        <div class="w-full flex flex-col gap-4 z-10">
+
+            <!-- TOMBOL INSTAGRAM -->
+            
+            <a href="https://www.instagram.com/inxy.5" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn flex items-center justify-center relative w-full py-4 px-6 rounded-2xl group text-white no-underline">
+                <i class="fa-brands fa-instagram text-2xl absolute left-6 group-hover:text-pink-400 transition-colors"></i>
+                <span class="font-medium tracking-wide">Instagram</span>
+            </a>
+
+            <!-- TOMBOL TIKTOK -->
+        
+            <a href="https://www.tiktok.com/@inxy5" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn flex items-center justify-center relative w-full py-4 px-6 rounded-2xl group text-white no-underline">
+                <i class="fa-brands fa-tiktok text-2xl absolute left-6 group-hover:text-black transition-colors group-hover:drop-shadow-[0_0_2px_rgba(255,255,255,1)]"></i>
+                <span class="font-medium tracking-wide">TikTok</span>
+            </a>
+
+            <!-- TOMBOL X (TWITTER) -->
+            
+            <a href="#" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn flex items-center justify-center relative w-full py-4 px-6 rounded-2xl group text-white no-underline">
+                <i class="fa-brands fa-x-twitter text-2xl absolute left-6 group-hover:text-gray-300 transition-colors"></i>
+                <span class="font-medium tracking-wide">X (Twitter)</span>
+            </a>
+
+            <!-- TOMBOL THREADS -->
+            
+            <a href="https://www.threads.com/@inxy.5" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn flex items-center justify-center relative w-full py-4 px-6 rounded-2xl group text-white no-underline">
+                <i class="fa-brands fa-threads text-2xl absolute left-6 group-hover:text-gray-200 transition-colors"></i>
+                <span class="font-medium tracking-wide">Threads</span>
+            </a>
+
+            
+            <!-- TOMBOL YOUTUBE -->
+            
+            <a href="https://www.youtube.com/@inxy5" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn flex items-center justify-center relative w-full py-4 px-6 rounded-2xl group text-white no-underline">
+                <i class="fa-brands fa-youtube text-2xl absolute left-6 group-hover:text-red-500 transition-colors"></i>
+                <span class="font-medium tracking-wide">YouTube</span>
+            </a>
+
+            <!-- TOMBOL LINKEDIN -->
+            
+            <a href="https://www.linkedin.com/in/davana-inxy5 " target="_blank" rel="noopener noreferrer" 
+               class="glass-btn flex items-center justify-center relative w-full py-4 px-6 rounded-2xl group text-white no-underline">
+                <i class="fa-brands fa-linkedin text-2xl absolute left-6 group-hover:text-blue-400 transition-colors"></i>
+                <span class="font-medium tracking-wide">LinkedIn</span>
+            </a>
+
+            <!-- TOMBOL GITHUB -->
+        
+            <a href="https://github.com/maustudylana27-rgb" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn flex items-center justify-center relative w-full py-4 px-6 rounded-2xl group text-white no-underline">
+                <i class="fa-brands fa-github text-2xl absolute left-6 group-hover:text-gray-400 transition-colors"></i>
+                <span class="font-medium tracking-wide">GitHub</span>
+            </a>
+            <!-- TOMBOL WEB SENDIRI -->
+        
+            <a href="https://birthday-davaafandi-inxy5.netlify.app" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn flex items-center justify-center relative w-full py-4 px-6 rounded-2xl group text-white no-underline">
+                <i class="fa-brands fa-linux text-2xl absolute left-6 group-hover:text-blue-400 transition-colors"></i>
+                <span class="font-medium tracking-wide">Web Perayaan UlangTahun</span>
+            </a>
+
+        </div>
+
+        <!-- Footer Kecil di Bagian Bawah -->
+        <div class="mt-8 text-xs text-white/50 font-light tracking-widest uppercase">
+            &copy; inxy5 
+            2026
+        </div>
+        
+    </div>
+
+</body>
+</html>
